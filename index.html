@@ -51,6 +51,20 @@
 			<p><input type="number" placeholder="Year..." oninput="this.className=''" name="year_u1" min="1900" max="2099" step="1"></p>
 			<p><input type="text" placeholder="Make..." oninput="this.className=''" name="make_u1"></p>
 			<p><input type="text" placeholder="Model..." oninput="this.className=''" name="model_u1"></p>
+			<p><input type="text" placeholder="Engine Manufacturer..." oninput="this.className=''" name="engmfr_u1"></p>
+			<p><input type="text" placeholder="Engine Model..." oninput="this.className=''" name="engmdl_u1"></p>
+			<p><input type="text" placeholder="Engine Serial..." oninput="this.className=''" name="engsrl_u1"></p>
+			<p><input type="text" placeholder="Trans Manufacturer..." oninput="this.className=''" name="trnsmfr_u1"></p>
+			<p><input type="text" placeholder="Trans Model..." oninput="this.className=''" name="trnsmfr_u1"></p>
+			<p>
+				<label for="axles_u1">Trans Type:</label>
+				<select id="axles_u1" name="axles_u1" onchange="axleCount(this.value)">
+					<option value="1">Auto</option>
+					<option value="2">Manual</option>
+				</select>
+			</p>
+			<p><input type="text" placeholder="Trans Serial..." oninput="this.className=''" name="trnsmfr_u1"></p>
+			<p><input type="text" placeholder="Axle Ratio..." oninput="this.className=''" name="trnsmfr_u1"></p>
 			<p>
 				<label for="axles_u1">Number of Axles:</label>
 				<select id="axles_u1" name="axles_u1" onchange="axleCount(this.value)">
