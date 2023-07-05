@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		@page {
+			
+		}
+		
+		@media print {
+			footer {
+				display: none;
+				position: fixed;
+				bottom: 0;
+		  	}
+			header {
+			    display: none;
+			    position: fixed;
+			    top: 0;
+			}
+		}
+		body {
+			font-family: "Calibri", sans-serif;
+			font-size: .88em;
+		}
+		
+		th {
+			font-size: 1.13em;
+			border: 1px solid;
+			border-color: #5cbdea;
+			background-color: #5cbdea;
+		}
+		
+		td {
+			border: 1px solid;
+		}
+		
+		td.noborder {
+			border: 0;
+		}
+		
+		table {
+			width: 100%;
+			border-collapse: collapse;
+		}
+		td.underline {
+			border: 0;
+			border-bottom: 1px solid;
+		}
+	</style>
+	<title>CMV Inspection Form</title>
+</head>
+<body>
+
+<div class = "formBody" style = "padding: 8%;">
+	<div class = "formHeader">
+		<div style = "width: 50%; float: left;">
+			<img src="jshlogo.png" alt="JS Held" width = "67%">
+		</div>
+		<div style = "width: 50%; float: left; margin-bottom:30px;">
+			<table>
+				<tr>
+					<td class="underline">Project #</td>
+					<td class="underline" id="projectNumber"></td>
+					<td class="underline">Date:</td>
+					<td class="underline" id="inspectDate"></td>
+				</tr>
+				<tr>
+					<td class="underline">By:</td>
+					<td class="underline" colspan = "3" id = "techName"></td>
+				</tr>
+				<tr>
+					<td class="underline">Subject:</td>
+					<td class="underline" colspan = "3">CMV Inspection</td>
+				</tr>
+			</table>
+		</div>		
+	</div>
+	<div class = "formContent">	
+	<!--INSERT TEMPLATES HERE-->
+	</div>	
+</div>
+
+<!--UNIT ELEMENT STRUCTURE TEMPLATES-->
+
+<table style = "margin-bottom: 30px;" id = "unitHeaderTemp">
+	<tr>
+		<td class = "unitID" width="25%">Unit:  </td>
+		<td class = "unitVIN" colspan = "2">VIN:  </td>
+	</tr>
+	<tr>
+		<td class = "unitYear" width="25%">Year:  </td>
+		<td class = "unitMake" width="25%">Make:  </td>
+		<td class = "unitModel">Model:  </td>
+	</tr>
+	<tr>
+		<td class = "unitComments" colspan = "3">Comments:  </td>
+	</tr>
+</table>
+
+<table style = "margin-top:30px;margin-bottom:30px;" id = "strokeHeaderTemp">
+	<tr>
+		<th colspan = "6">Air Brake Chamber Stroke Testing</th>
+	</tr>
+	<tr>
+		<td width = "17%">Pressure Source</td>
+		<td class = "pressSrc"></td>
+		<td width = "17%">Start Pressure</td>
+		<td class = "pressStart"></td>
+		<td width = "17%">End Pressure</td>
+		<td class = "pressEnd"></td>
+	</tr>
+</table>	
+
+<table style = "margin-top:30px;" id = "swAxleTemp">
+	<tr>
+		<th colspan="5" class = "axleTitle">Axle</th>
+	</tr>
+	<tr>
+		<td width = "23%">Tire Manufacturer</td>
+		<td class = "tireMfrL1" width = "24%"></td>
+		<td class="noborder" width="6%"></td>
+		<td width = "23%">Tire Manufacturer</td>
+		<td class = "tireMfrR1" width = "24%"></td>
+	</tr>
+	<tr>
+		<td>Tire Model</td>
+		<td class = "tireMdlL1"></td>
+		<td class="noborder"></td>
+		<td>Tire Model</td>
+		<td class = "tireMdlR1"></td>
+	</tr>
+	<tr>
+		<td>Tire Size</td>
+		<td class = "tireSizeL1"></td>
+		<td class="noborder"></td>
+		<td>Tire Size</td>
+		<td class = "tireSizeR1"></td>
+	</tr>
+	<tr>
+		<td>DOT Code</td>
+		<td class = "tireDOTL1"></td>
+		<td class="noborder"></td>
+		<td>DOT Code</td>
+		<td class = "tireDOTR1"></td>
+	</tr>
+		<td>Tread Depth</td>
+		<td class = "treadL1"></td>
+		<td class="noborder"></td>
+		<td>Tread Depth</td>
+		<td class = "treadR1"></td>
+	</tr>
+	<tr>
+		<td>Tire Comments</td>
+		<td class = "tireCmtL1"></td>
+		<td class="noborder"></td>
+		<td>Tire Comments</td>
+		<td class = "tireCmtR1"></td>
+	</tr>
+</table>
+	
+<table style = "margin-top:30px;" id = "dwAxleTemp">
+	<tr>
+		<th colspan="7" class = "axleTitle">Axle</th>
+	</tr>
+	<tr>
+		<td width = "23%">Tire Manufacturer</td>
+		<td class = "tireMfrL1" width = "12%"></td>
+		<td class = "tireMfrL2" width = "12%"></td>
+		<td class="noborder" width="6%"></td>
+		<td width = "23%">Tire Manufacturer</td>
+		<td class = "tireMfrR2" width = "12%"></td>
+		<td class = "tireMfrR1" width = "12%"></td>
+	</tr>
+	<tr>
+		<td>Tire Model</td>
+		<td class = "tireMdlL1"></td>
+		<td class = "tireMdlL2"></td>
+		<td class="noborder"></td>
+		<td>Tire Model</td>
+		<td class = "tireMdlR2"></td>
+		<td class = "tireMdlR1"></td>
+	</tr>
+	<tr>
+		<td>Tire Size</td>
+		<td class = "tireSizeL1"></td>
+		<td class = "tireSizeL2"></td>
+		<td class="noborder"></td>
+		<td>Tire Size</td>
+		<td class = "tireSizeR2"></td>
+		<td class = "tireSizeR1"></td>
+	</tr>
+	<tr>
+		<td>DOT Code</td>
+		<td class = "tireDOTL1"></td>
+		<td class = "tireDOTL2"></td>
+		<td class="noborder"></td>
+		<td>DOT Code</td>
+		<td class = "tireDOTR2"></td>
+		<td class = "tireDOTR1"></td>
+	</tr>
+	<tr>
+		<td>Tread Depth</td>
+		<td class = "treadL1"></td>
+		<td class = "treadL2"></td>
+		<td class="noborder"></td>
+		<td>Tread Depth</td>
+		<td class = "treadR2"></td>
+		<td class = "treadR1"></td>
+	</tr>
+	<tr>
+		<td>Tire Comments</td>
+		<td class = "tireCmtL1"></td>
+		<td class = "tireCmtL2"></td>
+		<td class="noborder"></td>
+		<td>Tire Comments</td>
+		<td class = "tireCmtR2"></td>
+		<td class = "tireCmtR1"></td>
+	</tr>
+</table>
+
+<table id = "drumTemp">
+	<tr>
+		<td width = "23%">Lining Thickness</td>
+		<td class = "liningLeft" width = "24%"></td>
+		<td class="noborder" width="6%"></td>
+		<td width = "23%">Lining Thickness</td>
+		<td class = "liningRight" width = "24%"></td>
+	</tr>
+	<tr>
+		<td>Chamber Type</td>
+		<td class = "chamberLeft"></td>
+		<td class="noborder"></td>
+		<td>Chamber Type</td>
+		<td class = "chamberRight"></td>
+	</tr>
+	<tr>
+		<td>Auto Slack Adjuster?</td>
+		<td class = "ASALeft"></td>
+		<td class="noborder"></td>
+		<td>Auto Slack Adjuster?</td>
+		<td class = "ASARight"></td>
+	</tr>
+	<tr>
+		<td>SA Length</td>
+		<td class = "SALenLeft"></td>
+		<td class="noborder"></td>
+		<td>SA Length</td>
+		<td class = "SALenRight"></td>
+	</tr>
+	<tr>
+		<td>Brake/Susp. Comments</td>
+		<td class = "bsCmtLeft"></td>
+		<td class="noborder"></td>
+		<td>Brake/Susp. Comments</td>
+		<td class = "bsCmtRight"></td>
+	</tr>
+</table>
+	
+<table id = "discTemp">
+	<tr>
+		<td class = "wearLeft" width = "23%">Pad Wear %</td>
+		<td width = "24%"></td>
+		<td class="noborder" width="6%"></td>
+		<td width = "23%">Pad Wear %</td>
+		<td class = "wearRight" width = "24%"></td>
+	</tr>
+	<tr>
+		<td>Rotor Thickness</td>
+		<td class = "rotorLeft"></td>
+		<td class="noborder"></td>
+		<td>Rotor Thickness</td>
+		<td class = "rotorRight"></td>
+	</tr>
+	<tr>
+		<td>Chamber Type</td>
+		<td class = "chamberLeft"></td>
+		<td class="noborder"></td>
+		<td>Chamber Type</td>
+		<td class = "chamberRight"></td>
+	</tr>
+	<tr>
+		<td>Brake/Susp. Comments</td>
+		<td class = "bsCmtLeft"></td>
+		<td class="noborder"></td>
+		<td>Brake/Susp. Comments</td>
+		<td class = "bsCmtRight"></td>
+	</tr>
+</table>
+
+<table style = "margin-bottom: 30px;" id = "axleStrokeTemp">
+	<tr>
+		<td colspan="3">Stroke Measurements</td>
+		<td class="noborder"></td>
+		<td colspan="3">Stroke Measurements</td>
+	</tr>
+	<tr>
+		<td width = "16%">Unstroked</td>
+		<td width = "15%">Stroked</td>
+		<td width = "16%">Delta</td>
+		<td class="noborder" width="6%"></td>
+		<td width = "16%">Unstroked</td>
+		<td width = "15%">Stroked</td>
+		<td width = "16%">Delta</td>
+	</tr>
+	<tr>
+		<td class = "unstrokedLeft"></td>
+		<td class = "strokedLeft"></td>
+		<td class = "deltaLeft">0</td>
+		<td class = "noborder"></td>
+		<td class = "unstrokedRight"></td>
+		<td class = "strokedRight"></td>
+		<td class = "deltaRight">0</td>
+	</tr>
+</table>
+
+
+</body>
+</html>

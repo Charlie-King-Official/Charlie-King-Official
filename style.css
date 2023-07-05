@@ -1,0 +1,172 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+}
+
+#CMVForm {
+  background-color: #ffffff;
+  margin: 100px auto;
+  font-family: Raleway;
+  padding: 40px 0px 0px 0px;
+  width: 70%;
+  min-width: 300px;
+}
+
+h1 {
+  text-align: center;  
+}
+
+input {
+  padding: 10px;
+  width: 100%;
+  font-size: 17px;
+  font-family: Raleway;
+  border: 1px solid #aaaaaa;
+}
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+}
+
+/* Hide all steps by default: */
+.tab {
+	padding: 40px;
+	display: none;
+}
+
+.tab.active {
+	display: block;
+}
+
+button {
+  background-color: #5cbdea;
+  color: #000000;
+  border: none;
+  padding: 10px 20px;
+  font-size: 17px;
+  font-family: Raleway;
+  cursor: pointer;
+}
+
+.vehicle {
+
+}
+
+.unitlinks {
+	display: block;
+	width: 100%;
+	margin: 5% 0%;
+}
+
+.navbar {
+  overflow: hidden;
+  border: 0;
+  background-color: #5cbdea;
+  display: flex;
+}
+
+.navbar button {
+  background-color: inherit;
+  flex: 14%;
+  border: 1px solid #ccc;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+.navbar button:hover {
+  background-color: #ddd;
+}
+
+.navbar button.active {
+  border-width: 0 0 1px 0;
+  background-color: #ffffff;
+}
+
+.axlebar {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #5cbdea;
+  display: flex;
+}
+
+.axlebar button {
+  background-color: inherit;
+  flex: 14%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+.axlebar button:hover {
+  background-color: #ddd;
+}
+
+.axlebar button.active {
+  background-color: #ffffff;
+}
+
+.axlecontent.active {
+  visibility: visibility;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+.axlecontent.hidden {
+  display: none;
+  height: 0;
+  padding: 0;
+  border: 0;
+}
+
+
+.row {
+	display: flex;
+}
+
+.tirecolumn {
+	padding: 5px;
+	flex: 25%;
+}
+
+.axlecolumn {
+	padding: 5px;
+	flex: 50%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+#prevBtn {
+  background-color: #bbbbbb;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;  
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.step.active {
+  opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #04AA6D;
+}
